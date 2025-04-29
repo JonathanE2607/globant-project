@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .p-primary-blue{
+        border-color: #61DBFB;
+    }
+     .p-primary{
+        background-color: #222222;
+     }
+
+     .p-secundary-color{
+        color: #B4B1B1;
+     }
+}
