@@ -1,0 +1,23 @@
+{
+    "main": {
+        "tittle": "<1>Aprende</1> react al siguiente nivel.",
+        "description": "Lorem ipsum dolor sit amet consectetur Hola que hace, magna netus vel dignissim parturient auctor.",
+        "start": " Iniciar"
+    },
+    "Navbar": {
+        "project": "Proyecto",
+        "home": "Inicio",
+        "solutions": "Soluciones",
+        "pricing": "Precios",
+        "developers": "Desarrolladores",
+        "logIn": "Inicio de sesion"
+    },
+    "titles": {
+      "titleOne": "Aprende sobre",
+      "titleTwo": "Conoce sobre otras cosas"
+    },
+    "links": {
+        "linkCard": "Aprende sobre",
+        "linkSecundaryCard": "Mas información"
+    }
+}

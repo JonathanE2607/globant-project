@@ -1,8 +1,14 @@
 import React from "react";
 import { TYPES_BUTTON } from "../../utils/typesButton";
+import { languages } from "../../utils/Languages";
+import { useTranslation } from "react-i18next";
 const ButtonUI = ({ content, variant, custom }: { content: string, variant: TYPES_BUTTON, custom?: string }) => {
 
-   let buttonElemnt: React.ReactElement = <></>
+   let buttonElemnt: React.ReactElement = <></>;
+   const {i18n} = useTranslation();
+   const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+   }
 
    switch (variant) {
       case TYPES_BUTTON.PRIMARY:
@@ -23,6 +29,15 @@ const ButtonUI = ({ content, variant, custom }: { content: string, variant: TYPE
       case TYPES_BUTTON.ABOUT:
          buttonElemnt = (
             <button className={`font-Roboto bg-gray-700 px-4 py-3 px-4 rounded-lg ${custom}`}>{content}</button>
+         );
+         break;
+      case TYPES_BUTTON.lANGUAGE:
+         buttonElemnt = (
+            <div>
+               {languages.map((lng) => {
+                 return <button key={lng.code} onClick={()=> changeLanguage(lng.code)} className={`font-Roboto px-4 py-2 rounded-full bg-white text-black text-sm font-medium hover:bg-white/90 transition-colors ml-4 ${custom}`}>{lng.lang}</button>
+               })}
+            </div>
          );
          break;
    }

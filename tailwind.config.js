@@ -13,6 +13,7 @@ export default {
        "custom-purpple": "#A374FF",
        "custom-purpple-icon": "#8D52FF",
        "custom-orange": "#FFB44B",
+       "primary-blue": "#61DBFB",
       }
     },
   },

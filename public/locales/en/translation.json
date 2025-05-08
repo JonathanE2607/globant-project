@@ -1,0 +1,19 @@
+{
+    "main": {
+        "tittle": "<1>Learn</1> react to the next level.",
+        "description": "Lorem ipsum dolor hello, how are you consectetur adipiscing elit, magna netus vel dignissim parturient auctor.",
+        "start": " Start"
+    },
+    "Navbar": {
+        "project": "Project",
+        "home": "Home",
+        "solutions": "Solutions",
+        "pricing": "Pricing",
+        "developers": "Developers",
+        "logIn": "Log in"
+    },
+    "titles": {
+      "titleOne": "Learn about",
+      "titleTwo": "Know about other topics"
+    }
+}

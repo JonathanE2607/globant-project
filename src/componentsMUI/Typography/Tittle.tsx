@@ -1,15 +1,17 @@
 
+import React from "react";
 import { TYPES_TITTLE } from "../../utils/typesTittle";
 
-const TittleUI = ({ content, variant, custom }: { content: string, variant: TYPES_TITTLE, custom?: string }) => {
+const TittleUI = ({ content, variant, custom, children }: { content?: string, variant: TYPES_TITTLE, custom?: string, children?: React.ReactElement | React.ReactElement[] }) => {
 
     let tittleElement: React.ReactElement = <></>;
+    const childrenElement = content? content : children;
 
     switch (variant) {
         case TYPES_TITTLE.PRINCIPAL:
             tittleElement = (
                 <h2 className={`font-Roboto text-7xl text-white font-semibold ${custom}`}>
-                    {content}
+                    {childrenElement}
                 </h2>
             )
             break;

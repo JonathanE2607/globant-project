@@ -3,4 +3,5 @@ export enum TYPES_BUTTON{
     SECUNDARY,
     ABOUT,
     CUSTOM,
+    lANGUAGE,
 }

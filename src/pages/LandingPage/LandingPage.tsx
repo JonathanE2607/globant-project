@@ -2,17 +2,42 @@ import Card from "../../componentsMUI/Data display/Card";
 import SecondaryCard from "../../componentsMUI/Data display/SecundaryCard";
 import Footer from "../../componentsMUI/Navigation/Footer";
 import TittleUI from "../../componentsMUI/Typography/Tittle";
-import FirstView from "../../componentsMUI/Data display/FirstView";
+import Navbar from "./../../componentsMUI/Navigation/Navbar"
+import TextUI from "../../componentsMUI/Typography/Text";
+import ButtonUI from "../../componentsMUI/Forms/Button";
+import ImageUI from "../../componentsMUI/UI/Image";
 import { TYPES_CARD } from "../../utils/typesCard";
 import { TYPES_SECUNDARY_CARD } from "../../utils/typesSecundaryCard";
 import { TYPES_TITTLE } from "../../utils/typesTittle";
-
+import { TYPES_BUTTON } from "../../utils/typesButton";
+import { Trans, useTranslation } from "react-i18next";
 const LandingPage = () => {
+
+  const { t } = useTranslation()
   return (
     <>
-      <FirstView />
+      <section className="p-primary w-full h-screen flex flex-wrap">
+        <Navbar />
+        <div className="w-3/5">
+          <TittleUI
+            variant={TYPES_TITTLE.PRINCIPAL}
+            children={
+              <Trans
+                i18nKey={"main.tittle"}
+                components={{ 1: <b className="text-cyan-400"></b> }}
+              />
+            }
+            custom="px-16 mt-16 text-8xl font-bold"
+          />
+          <TextUI content={t("main.description")} styles="ml-16 mt-8 text-xl p-secundary-color max-w-[70%]" />
+          <ButtonUI content={t("main.start")} variant={TYPES_BUTTON.CUSTOM} custom="ml-14 mt-14 px-20 py-3 rounded-full border border-[2.5px] p-primary-blue font-medium text-cyan-400 font-xl hover:bg-cyan-400/10 transition-colors ml-8 mt-8" />
+        </div>
+        <div className="w-2/5">
+          <ImageUI source="https://icon.icepanel.io/Technology/svg/React.svg" alternative="React brand" sizes="none" styles="h-[75%] w-full" />
+        </div>
+      </section>
       <div className="bg-gradient-to-b from-[#222222] to-black flex justify-center py-8">
-        <TittleUI content="Learn about" variant={TYPES_TITTLE.ABOUT} custom="text-white font-bold text-5xl " />
+        <TittleUI content={t("titles.titleOne")} variant={TYPES_TITTLE.ABOUT} custom="text-white font-bold text-5xl " />
       </div>
       <section className="bg-black flex justify-around py-12" >
         <Card
@@ -29,7 +54,7 @@ const LandingPage = () => {
         />
       </section>
       <div className="bg-black flex justify-center py-8">
-        <TittleUI content="Know abot other topics" variant={TYPES_TITTLE.ABOUT} custom="text-white font-bold text-5xl " />
+        <TittleUI content={t("titles.titleTwo")} variant={TYPES_TITTLE.ABOUT} custom="text-white font-bold text-5xl " />
       </div>
       <section className="bg-black flex justify-center py-8">
         <SecondaryCard
@@ -37,7 +62,7 @@ const LandingPage = () => {
           variant={TYPES_SECUNDARY_CARD.LEFT}
           title="Clean code"
           description="Risus sit suscipit et nibh. Morbi pretium volutpat eget habitasse habitant elementum dignissim arcu mauris. Ullamcorper euismod id commodo mi nec. Sit egestas mauris imperdiet feugiat eros, sapien at pellentesque."
-           />
+        />
       </section>
       <section className="bg-black flex justify-center py-8">
         <SecondaryCard
@@ -45,7 +70,7 @@ const LandingPage = () => {
           variant={TYPES_SECUNDARY_CARD.RIGHT}
           title="Solid principles"
           description="Risus sit suscipit et nibh. Morbi pretium volutpat eget habitasse habitant elementum dignissim arcu mauris. Ullamcorper euismod id commodo mi nec. Sit egestas mauris imperdiet feugiat eros, sapien at pellentesque."
-           />
+        />
       </section>
       <Footer />
     </>

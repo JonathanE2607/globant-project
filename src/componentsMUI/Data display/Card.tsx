@@ -3,6 +3,7 @@ import { TYPE_LINKS } from "../../utils/typesLink";
 import LinkUI from "../Forms/link";
 import TextUI from "../Typography/Text";
 import IconUI from "../UI/Icon";
+
 type CardProps = {
     content: string,
     textCustom?: string,
@@ -30,7 +31,7 @@ const Card = ({ content,
                     <div className="bg-custom-blue p-1 rounded-xl">
                         <IconUI customIcon="custom-blue-icon" colorIcon="custom-blue/95" />
                     </div>
-                    <h3 className="text-white font-bold text-lg mt-4">{content}</h3>
+                    <h3 className="text-white font-bold text-2xl mt-2">{content}</h3>
                     <TextUI
                         content="Lorem ipsum dolor sit amet consectetur adipiscing elit, magna netus vel dignissim parturient auctor."
                         styles="text-white text-sm mt-2"
@@ -39,7 +40,7 @@ const Card = ({ content,
                         content="Learn More →"
                         link="/"
                         variant={TYPE_LINKS.CUSTOM_LINK}
-                        custom={`text-custom-blue font-semibold mt-2`}
+                        custom={`text-custom-blue text-lg font-bold mb-2`}
                     />
                 </div>
             )
@@ -51,7 +52,7 @@ const Card = ({ content,
                     <div className="bg-custom-purpple p-1 rounded-xl">
                         <IconUI customIcon="custom-purpple-icon" colorIcon="custom-purpple/15" />
                     </div>
-                    <h3 className="text-white font-semibold text-lg mt-4">{content}</h3>
+                    <h3 className="text-white font-bold text-2xl mt-2">{content}</h3>
                     <TextUI
                         content="Lorem ipsum dolor sit amet consectetur adipiscing elit, magna netus vel dignissim parturient auctor."
                         styles="text-white text-sm mt-2"
@@ -60,7 +61,7 @@ const Card = ({ content,
                         content="Learn More →"
                         link="/"
                         variant={TYPE_LINKS.CUSTOM_LINK}
-                        custom="text-custom-purpple font-semibold mt-2"
+                        custom="text-custom-purpple text-lg font-bold mb-2"
                     />
                 </div>
             )
@@ -72,7 +73,7 @@ const Card = ({ content,
                     <div className="bg-custom-orange p-1 rounded-xl">
                         <IconUI customIcon="custom-orange" colorIcon="custom-orange/15" />
                     </div>
-                    <h3 className="text-white font-semibold text-lg mt-4">{content}</h3>
+                    <h3 className="text-white font-bold text-2xl mt-2">{content}</h3>
                     <TextUI
                         content="Lorem ipsum dolor sit amet consectetur adipiscing elit, magna netus vel dignissim parturient auctor."
                         styles="text-white text-sm mt-2"
@@ -81,7 +82,7 @@ const Card = ({ content,
                         content="Learn More →"
                         link="/"
                         variant={TYPE_LINKS.CUSTOM_LINK}
-                        custom="text-custom-orange font-semibold mt-2"
+                        custom="text-custom-orange text-lg font-bold mb-2"
                     />
                 </div>
             )
