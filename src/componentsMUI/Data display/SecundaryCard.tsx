@@ -10,13 +10,15 @@ interface SecondaryCardProps {
   buttonText?: string
   variant: TYPES_SECUNDARY_CARD
   source: string
+  linkSecundaryCard: string
 }
 
 export default function SecondaryCard({
   title,
   description,
   variant,
-  source
+  source,
+  linkSecundaryCard
 }: SecondaryCardProps) {
   let secundaryCardElement: React.ReactElement = <></>;
 
@@ -33,7 +35,7 @@ export default function SecondaryCard({
               <p className="text-sm text-gray-300">{description}</p>
             </div>
             <div className="mt-4">
-              <ButtonUI content="More info" variant={TYPES_BUTTON.ABOUT} />
+              <ButtonUI content={linkSecundaryCard} variant={TYPES_BUTTON.ABOUT} />
             </div>
           </div>
         </div>

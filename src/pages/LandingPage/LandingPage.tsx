@@ -43,14 +43,17 @@ const LandingPage = () => {
         <Card
           content="Components"
           variant={TYPES_CARD.BLUE}
+          linkCard={t("links.linkCard")}
         />
         <Card
           content="Hooks"
           variant={TYPES_CARD.PURPPLE}
+          linkCard={t("links.linkCard")}
         />
         <Card
           content="Props"
           variant={TYPES_CARD.ORANGE}
+          linkCard={t("links.linkCard")}
         />
       </section>
       <div className="bg-black flex justify-center py-8">
@@ -62,6 +65,7 @@ const LandingPage = () => {
           variant={TYPES_SECUNDARY_CARD.LEFT}
           title="Clean code"
           description="Risus sit suscipit et nibh. Morbi pretium volutpat eget habitasse habitant elementum dignissim arcu mauris. Ullamcorper euismod id commodo mi nec. Sit egestas mauris imperdiet feugiat eros, sapien at pellentesque."
+          linkSecundaryCard={t("links.linkSecundaryCard")}
         />
       </section>
       <section className="bg-black flex justify-center py-8">
@@ -70,6 +74,7 @@ const LandingPage = () => {
           variant={TYPES_SECUNDARY_CARD.RIGHT}
           title="Solid principles"
           description="Risus sit suscipit et nibh. Morbi pretium volutpat eget habitasse habitant elementum dignissim arcu mauris. Ullamcorper euismod id commodo mi nec. Sit egestas mauris imperdiet feugiat eros, sapien at pellentesque."
+          linkSecundaryCard={t("links.linkSecundaryCard")}
         />
       </section>
       <Footer />

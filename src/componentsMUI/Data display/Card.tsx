@@ -13,6 +13,7 @@ type CardProps = {
     custom?: string,
     styleIcon?: string,
     colorIcon?: string,
+    linkCard:string
 }
 const Card = ({ content,
     variant,
@@ -21,7 +22,8 @@ const Card = ({ content,
     styleIcon,
     colorIcon,
     background,
-    textCustom }: CardProps) => {
+    textCustom,
+    linkCard }: CardProps) => {
 
     let cardElement: React.ReactElement = <></>;
     switch (variant) {
@@ -37,7 +39,7 @@ const Card = ({ content,
                         styles="text-white text-sm mt-2"
                     />
                     <LinkUI
-                        content="Learn More →"
+                        content={linkCard}
                         link="/"
                         variant={TYPE_LINKS.CUSTOM_LINK}
                         custom={`text-custom-blue text-lg font-bold mb-2`}

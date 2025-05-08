@@ -15,5 +15,9 @@
     "titles": {
       "titleOne": "Learn about",
       "titleTwo": "Know about other topics"
+    },
+    "links": {
+        "linkCard": "learn more ->",
+        "linkSecundaryCard": "More info"
     }
 }
