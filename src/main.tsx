@@ -4,11 +4,15 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/LandingPage/LandingPage"
 import "./i18n"
+import Catalog from "./pages/Dashboard/Catalog";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+  },{
+    path: "/Catalog",
+    element: <Catalog />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")!).render(
