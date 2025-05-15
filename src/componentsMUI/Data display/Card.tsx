@@ -13,7 +13,7 @@ type CardProps = {
     custom?: string,
     styleIcon?: string,
     colorIcon?: string,
-    linkCard:string
+    linkCard?: string,
 }
 const Card = ({ content,
     variant,
@@ -26,6 +26,7 @@ const Card = ({ content,
     linkCard }: CardProps) => {
 
     let cardElement: React.ReactElement = <></>;
+    const hasLinkCard = linkCard? linkCard:""
     switch (variant) {
         case TYPES_CARD.BLUE:
             cardElement = (
@@ -39,7 +40,7 @@ const Card = ({ content,
                         styles="text-white text-sm mt-2"
                     />
                     <LinkUI
-                        content={linkCard}
+                        content={hasLinkCard}
                         link="/"
                         variant={TYPE_LINKS.CUSTOM_LINK}
                         custom={`text-custom-blue text-lg font-bold mb-2`}
@@ -60,7 +61,7 @@ const Card = ({ content,
                         styles="text-white text-sm mt-2"
                     />
                     <LinkUI
-                        content="Learn More →"
+                        content={hasLinkCard}
                         link="/"
                         variant={TYPE_LINKS.CUSTOM_LINK}
                         custom="text-custom-purpple text-lg font-bold mb-2"
@@ -81,7 +82,7 @@ const Card = ({ content,
                         styles="text-white text-sm mt-2"
                     />
                     <LinkUI
-                        content="Learn More →"
+                        content={hasLinkCard}
                         link="/"
                         variant={TYPE_LINKS.CUSTOM_LINK}
                         custom="text-custom-orange text-lg font-bold mb-2"
@@ -99,6 +100,18 @@ const Card = ({ content,
                     <h3 className="text-white font-semibold text-lg mt-4">{content}</h3>
                     <TextUI content="Lorem ipsum dolor sit amet consectetur adipiscing elit, magna netus vel dignissim parturient auctor." styles="text-white text-sm mt-2" />
                     <LinkUI content="Learn More →" link="/" variant={TYPE_LINKS.CUSTOM_LINK} custom={`${textCustom} font-semibold mt-2`} />
+                </div>
+            )
+            break;
+        case TYPES_CARD.OFFER:
+            cardElement = (
+                <div className={`w-64 h-full shadow-lg bg-gray-600 rounded-xl flex flex-col justify-between px-4 py-6`}>
+                    <div className={`${custom} p-1 rounded-xl`}>
+                        <image className=""></image>
+                    </div>
+                    <h3 className="text-white font-semibold text-lg mt-4">{content}</h3>
+                    <progress value={5} max={10} className="mt-4 rounded-lg w-full rounded-lg" />
+
                 </div>
             )
             break;

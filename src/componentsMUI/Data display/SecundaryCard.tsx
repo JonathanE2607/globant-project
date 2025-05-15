@@ -23,6 +23,7 @@ export default function SecondaryCard({
   let secundaryCardElement: React.ReactElement = <></>;
 
   switch (variant) {
+    
     case TYPES_SECUNDARY_CARD.LEFT:
       secundaryCardElement = (
         <div className="flex overflow-hidden rounded-xl border-gray-400 border-2 text-white shadow-md shadow-gray-400 max-w-6xl min-h-64">

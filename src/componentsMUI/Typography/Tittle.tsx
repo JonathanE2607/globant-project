@@ -2,10 +2,16 @@
 import React from "react";
 import { TYPES_TITTLE } from "../../utils/typesTittle";
 
-const TittleUI = ({ content, variant, custom, children }: { content?: string, variant: TYPES_TITTLE, custom?: string, children?: React.ReactElement | React.ReactElement[] }) => {
+type TittleTypes = {
+    content?: string,
+    variant: TYPES_TITTLE,
+    custom?: string,
+    children?: React.ReactElement | React.ReactElement[]
+}
+const TittleUI = ({ content, variant, custom, children }: TittleTypes) => {
 
     let tittleElement: React.ReactElement = <></>;
-    const childrenElement = content? content : children;
+    const childrenElement = content ? content : children;
 
     switch (variant) {
         case TYPES_TITTLE.PRINCIPAL:
@@ -18,8 +24,8 @@ const TittleUI = ({ content, variant, custom, children }: { content?: string, va
 
         case TYPES_TITTLE.SECONDARY:
             tittleElement = (
-                <h2 className="">
-                    {content}
+                <h2 className="font-Roboto text-4xl text-white font-semibold">
+                    {childrenElement}
                 </h2>
             )
             break;
@@ -27,7 +33,7 @@ const TittleUI = ({ content, variant, custom, children }: { content?: string, va
         case TYPES_TITTLE.ABOUT:
             tittleElement = (
                 <h2 className={custom}>
-                    {content}
+                    {childrenElement}
                 </h2>
             )
             break;

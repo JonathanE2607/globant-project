@@ -9,7 +9,6 @@ export default function Footer() {
     return (
         <footer className="bg-black text-white py-8">
             <div className="container mx-auto flex flex-col items-center justify-center">
-                {/* Policy Links */}
                 <div className="mb-8 flex space-x-20">
                     <LinkUI content="Terms of Service" link="/" variant={TYPE_LINKS.CUSTOM_LINK} custom="hover:underline text-gray-300" />
                     <LinkUI content="Privacy Policy" link="/" variant={TYPE_LINKS.CUSTOM_LINK} custom="hover:underline text-gray-300" />

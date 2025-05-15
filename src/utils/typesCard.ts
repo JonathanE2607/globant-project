@@ -2,5 +2,7 @@ export const enum TYPES_CARD{
    BLUE,
    PURPPLE,
    ORANGE,
-   CUSTOM 
+   CUSTOM,
+   LEARNING_PROGRESS,
+   OFFER
 }

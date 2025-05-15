@@ -1,25 +1,32 @@
 
 import React from "react";
 import { TYPE_LINKS } from "../../utils/typesLink";
+import { Link } from "react-router-dom";
 
-const LinkUI = ({ content, link, variant, custom }: { content: string | React.ReactElement, link: string, variant: TYPE_LINKS, custom?: string }) => {
+type LinkTypes = {
+   content: string | React.ReactElement,
+   link: string,
+   variant: TYPE_LINKS,
+   custom?: string
+}
+const LinkUI = ({ content, link, variant, custom }: LinkTypes) => {
 
    let linkElement: React.ReactElement = <></>
 
    switch (variant) {
       case TYPE_LINKS.NAV_LINK:
          linkElement = (
-            <a href={link} className={`font-Roboto border-b-2 border-transparent pb-1 hover:border-white/70 transition-colors font-medium ${custom}`}>{content}</a>
+            <Link to={link} className={`font-Roboto border-b-2 border-transparent pb-1 hover:border-white/70 transition-colors font-medium ${custom}`}>{content}</Link>
          );
          break;
       case TYPE_LINKS.TITTLE_LINK:
          linkElement = (
-            <a href={link} className={`font-Roboto text-2xl font-bold mr-10 ${custom}`}>{content}</a>
+            <Link to={link} className={`font-Roboto text-2xl font-bold mr-10 ${custom}`}>{content}</Link>
          );
          break
       case TYPE_LINKS.CUSTOM_LINK:
          linkElement = (
-            <a href={link} className={`font-Roboto font-bold ${custom}`}>{content}</a>
+            <Link to={link} className={`font-Roboto font-bold ${custom}`}>{content}</Link>
          );
          break
    }

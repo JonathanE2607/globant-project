@@ -4,9 +4,12 @@ import { TYPE_LINKS } from "../../utils/typesLink";
 import { TYPES_BUTTON } from "../../utils/typesButton";
 import { useTranslation } from "react-i18next";
 
-export default function Header({custom}:{custom?:string}) {
+type NavbarTypes = {
+  custom?: string,
+}
+export default function Header({ custom }: NavbarTypes) {
 
-  const { t } =  useTranslation();
+  const { t } = useTranslation();
 
   return (
     <header className={`w-full p-primary text-white py-8 ${custom}`}>
@@ -25,7 +28,7 @@ export default function Header({custom}:{custom?:string}) {
 
         <div className="flex items-center space-x-4">
           <ButtonUI content={t("Navbar.logIn")} variant={TYPES_BUTTON.PRIMARY} />
-          <ButtonUI content="Change Language" variant={TYPES_BUTTON.lANGUAGE}/>
+          <ButtonUI content="Change Language" variant={TYPES_BUTTON.lANGUAGE} />
         </div>
       </div>
     </header>

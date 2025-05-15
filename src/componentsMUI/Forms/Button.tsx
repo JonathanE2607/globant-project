@@ -2,12 +2,18 @@ import React from "react";
 import { TYPES_BUTTON } from "../../utils/typesButton";
 import { languages } from "../../utils/Languages";
 import { useTranslation } from "react-i18next";
-const ButtonUI = ({ content, variant, custom }: { content: string, variant: TYPES_BUTTON, custom?: string }) => {
+
+type buttonTypes = {
+   content: string,
+   variant: TYPES_BUTTON,
+   custom?: string
+}
+const ButtonUI = ({ content, variant, custom }: buttonTypes) => {
 
    let buttonElemnt: React.ReactElement = <></>;
-   const {i18n} = useTranslation();
+   const { i18n } = useTranslation();
    const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
+      i18n.changeLanguage(lng);
    }
 
    switch (variant) {
@@ -35,7 +41,7 @@ const ButtonUI = ({ content, variant, custom }: { content: string, variant: TYPE
          buttonElemnt = (
             <div>
                {languages.map((lng) => {
-                 return <button key={lng.code} onClick={()=> changeLanguage(lng.code)} className={`font-Roboto px-4 py-2 rounded-full bg-white text-black text-sm font-medium hover:bg-white/90 transition-colors ml-4 ${custom}`}>{lng.lang}</button>
+                  return <button key={lng.code} onClick={() => changeLanguage(lng.code)} className={`font-Roboto px-4 py-2 rounded-full bg-white text-black text-sm font-medium hover:bg-white/90 transition-colors ml-4 ${custom}`}>{lng.lang}</button>
                })}
             </div>
          );
