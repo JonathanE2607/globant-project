@@ -24,7 +24,7 @@ const TittleUI = ({ content, variant, custom, children }: TittleTypes) => {
 
         case TYPES_TITTLE.SECONDARY:
             tittleElement = (
-                <h2 className="font-Roboto text-4xl text-white font-semibold">
+                <h2 className={`font-Roboto text-4xl text-white font-semibold ${custom}`}>
                     {childrenElement}
                 </h2>
             )
