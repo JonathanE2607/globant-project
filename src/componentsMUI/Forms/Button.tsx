@@ -2,15 +2,24 @@ import React from "react";
 import { TYPES_BUTTON } from "../../utils/typesButton";
 import { languages } from "../../utils/Languages";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 type buttonTypes = {
    content: string,
    variant: TYPES_BUTTON,
    custom?: string
+   navLink?: string,
 }
-const ButtonUI = ({ content, variant, custom }: buttonTypes) => {
+const ButtonUI = ({ content, variant, custom, navLink }: buttonTypes) => {
 
    let buttonElemnt: React.ReactElement = <></>;
+   const navigate = useNavigate();
+   let hasNavigateLink = navLink ? navLink : "";
+
+   const navFunction = (pathLink: string) => {
+      navigate(pathLink);
+   }
+
    const { i18n } = useTranslation();
    const changeLanguage = (lng: string) => {
       i18n.changeLanguage(lng);
@@ -19,22 +28,22 @@ const ButtonUI = ({ content, variant, custom }: buttonTypes) => {
    switch (variant) {
       case TYPES_BUTTON.PRIMARY:
          buttonElemnt = (
-            <button className={`font-Roboto px-4 py-2 rounded-full border border-white text-sm font-medium hover:bg-white/10 transition-colors ${custom}`}>{content}</button>
+            <button onClick={() => { navFunction(hasNavigateLink) }} className={`font-Roboto px-4 py-2 rounded-full border border-white text-sm font-medium hover:bg-white/10 transition-colors ${custom}`}>{content}</button>
          )
          break;
       case TYPES_BUTTON.SECUNDARY:
          buttonElemnt = (
-            <button className={`font-Roboto px-4 py-2 rounded-full bg-white text-black text-sm font-medium hover:bg-white/90 transition-colors ${custom}`}>{content}</button>
+            <button onClick={() => { navFunction(hasNavigateLink) }} className={`font-Roboto px-4 py-2 rounded-full bg-white text-black text-sm font-medium hover:bg-white/90 transition-colors ${custom}`}>{content}</button>
          );
          break
       case TYPES_BUTTON.CUSTOM:
          buttonElemnt = (
-            <button className={`font-Roboto ${custom}`}>{content}</button>
+            <button onClick={() => { navFunction(hasNavigateLink) }} className={`font-Roboto ${custom}`}>{content}</button>
          );
          break
       case TYPES_BUTTON.ABOUT:
          buttonElemnt = (
-            <button className={`font-Roboto bg-gray-700 px-4 py-3 px-4 rounded-lg ${custom}`}>{content}</button>
+            <button onClick={() => { navFunction(hasNavigateLink) }} className={`font-Roboto bg-gray-700 px-4 py-3 px-4 rounded-lg ${custom}`}>{content}</button>
          );
          break;
       case TYPES_BUTTON.lANGUAGE:

@@ -8,6 +8,7 @@ import Catalog from "./pages/Dashboard/Catalog";
 import Layout from "./pages/Dashboard/Layout";
 import LayoutCourse from "./pages/Course/Layout";
 import Content from "./pages/Course/Content";
+import Practice from "./pages/Course/Practice/Index";
 
 const router = createBrowserRouter([
   {
@@ -30,7 +31,10 @@ const router = createBrowserRouter([
       {
        path: "content",
        element: < Content />
-      }
+      },{
+        path: "practice",
+        element: < Practice />
+       }
     ]
   }
 ]);
