@@ -30,7 +30,7 @@ const LandingPage = () => {
             custom="px-16 mt-16 text-8xl font-bold"
           />
           <TextUI content={t("main.description")} styles="ml-16 mt-8 text-xl p-secundary-color max-w-[70%]" />
-          <ButtonUI content={t("main.start")} variant={TYPES_BUTTON.CUSTOM} custom="ml-14 mt-14 px-20 py-3 rounded-full border border-[2.5px] p-primary-blue font-medium text-cyan-400 font-xl hover:bg-cyan-400/10 transition-colors ml-8 mt-8" />
+          <ButtonUI content={t("main.start")} variant={TYPES_BUTTON.CUSTOM} custom="ml-14 mt-14 px-20 py-3 rounded-full border border-[2.5px] p-primary-blue font-medium text-cyan-400 font-xl hover:bg-cyan-400/10 transition-colors" />
         </div>
         <div className="w-2/5">
           <ImageUI source="https://icon.icepanel.io/Technology/svg/React.svg" alternative="React brand" sizes="none" styles="h-[75%] w-full" />

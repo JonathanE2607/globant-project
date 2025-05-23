@@ -1,16 +1,19 @@
 import React from "react"
 import Header from "../../componentsMUI/Navigation/Navbar"
 import Footer from "../../componentsMUI/Navigation/Footer"
+import SearchComponent from "../../componentsMUI/Forms/Input"
+import { Outlet } from "react-router-dom"
 
 type layoutTypes = {
-    children: React.ReactElement | React.ReactElement[]
+
 }
 
-const Layout = ({ children }: layoutTypes) => {
+const Layout = ({ }: layoutTypes) => {
     return (
         <>
             <Header custom="bg-black" />
-            <main>{children}</main>
+            <SearchComponent />
+            <Outlet />
             <Footer />
         </>
     )

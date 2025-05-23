@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { TYPES_CARD } from "../../utils/typesCard";
 import { TYPE_LINKS } from "../../utils/typesLink";
 import LinkUI from "../Forms/link";
@@ -14,6 +15,12 @@ type CardProps = {
     styleIcon?: string,
     colorIcon?: string,
     linkCard?: string,
+    progress?: string,
+    teacherName?: string,
+    imageURL?: string,
+    numSucces?: number,
+    numFinish?: number,
+    linkTo?: string
 }
 const Card = ({ content,
     variant,
@@ -23,10 +30,19 @@ const Card = ({ content,
     colorIcon,
     background,
     textCustom,
-    linkCard }: CardProps) => {
+    linkCard,
+    teacherName,
+    imageURL,
+    numSucces,
+    numFinish,
+    linkTo }: CardProps) => {
 
     let cardElement: React.ReactElement = <></>;
-    const hasLinkCard = linkCard? linkCard:""
+    const hasLinkCard = linkCard ? linkCard : "";
+    const hasLinkTo = linkTo ? linkTo : "/";
+    const hasNumSucces = numSucces ? numSucces : 0;
+    const hasNumFinish = numFinish ? numFinish : 0;
+
     switch (variant) {
         case TYPES_CARD.BLUE:
             cardElement = (
@@ -103,15 +119,47 @@ const Card = ({ content,
                 </div>
             )
             break;
+
         case TYPES_CARD.OFFER:
             cardElement = (
-                <div className={`w-64 h-full shadow-lg bg-gray-600 rounded-xl flex flex-col justify-between px-4 py-6`}>
-                    <div className={`${custom} p-1 rounded-xl`}>
-                        <image className=""></image>
+                <div className="w-1/3 h-full px-8">
+                    <div className="overflow-hidden rounded-lg bg-slate-700 shadow-lg hover:scale-105">
+                        <img
+                            src={imageURL}
+                            alt="Video conference on laptop"
+                            className="w-[90%] h-64 rounded-lg mt-4 mx-auto"
+                        />
+                        <Link to={hasLinkTo}>
+                            <div className="p-5 text-white">
+                                <h2 className="text-2xl font-bold mb-6">
+                                    {content}
+                                </h2>
+                                <div className="flex items-center mb-4">
+                                    <div className="relative h-10 w-10 overflow-hidden rounded-full border-2 border-teal-400">
+                                        <img
+                                            src="/placeholder.svg?height=40&width=40"
+                                            alt="Instructor avatar"
+                                            width={10}
+                                            height={10}
+                                            className="object-cover"
+                                        />
+                                    </div>
+                                    <span className="ml-3 text-lg font-medium">{teacherName}</span>
+                                </div>
+                                <div className="mt-2">
+                                    <div className="w-full bg-gray-200 rounded h-2">
+                                        <div
+                                            className="bg-teal-500 h-2 rounded"
+                                            style={{ width: `${(hasNumSucces / hasNumFinish) * 100}%` }}
+                                        />
+                                    </div>
+                                    <div className="mt-2 text-right text-gray-400">
+                                        Lesson {hasNumSucces} of {hasNumFinish}
+                                    </div>
+                                </div>
+                            </div>
+                        </Link>
                     </div>
-                    <h3 className="text-white font-semibold text-lg mt-4">{content}</h3>
-                    <progress value={5} max={10} className="mt-4 rounded-lg w-full rounded-lg" />
-
                 </div>
             )
             break;

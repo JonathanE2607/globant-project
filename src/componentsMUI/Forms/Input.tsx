@@ -5,7 +5,7 @@ type InputTypes = {
 const SearchComponent = ({ }: InputTypes) => {
     return (
         <div className="w-full bg-black text-white py-6 px-4">
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col md:flex-row gap-2">
                     <div className="relative flex-grow">
                         <input
