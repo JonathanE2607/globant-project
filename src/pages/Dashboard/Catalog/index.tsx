@@ -12,7 +12,9 @@ const Catalog = () => {
         <div className="bg-black">
             <Layout>
                 <SearchComponent />
-                <div className="bg-black">
+                <div className="bg-black flex h-full ">
+                  <Card variant={TYPES_CARD.OFFER} content="AWS Certified Solutions Architecture" />
+                  <Card variant={TYPES_CARD.OFFER} content="AWS Certified Solutions Architecture" />
                   <Card variant={TYPES_CARD.OFFER} content="AWS Certified Solutions Architecture" />
                 </div>
             </Layout>
