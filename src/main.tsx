@@ -8,7 +8,9 @@ import Catalog from "./pages/Dashboard/Catalog";
 import Layout from "./pages/Dashboard/Layout";
 import LayoutCourse from "./pages/Course/Layout";
 import Content from "./pages/Course/Content";
-import Practice from "./pages/Course/Practice/Index";
+import Practice from "./pages/Course/Practice";
+import ContentParts from "./pages/Course/ContentParts";
+
 
 const router = createBrowserRouter([
   {
@@ -29,11 +31,14 @@ const router = createBrowserRouter([
     element: <LayoutCourse/>,
     children: [
       {
-       path: "content",
+       path: "content/:id",
        element: < Content />
       },{
         path: "practice",
         element: < Practice />
+       },{
+        path: "content/:id/:id",
+        element: < ContentParts />
        }
     ]
   }

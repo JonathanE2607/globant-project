@@ -1,4 +1,4 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 import { TYPES_BUTTON } from "../../utils/typesButton";
 import { languages } from "../../utils/Languages";
 import { useTranslation } from "react-i18next";
@@ -8,14 +8,15 @@ type buttonTypes = {
    content: string,
    variant: TYPES_BUTTON,
    custom?: string
-   navLink?: string,
+   navLink?: string | void,
+   onClick?: MouseEventHandler
 }
-const ButtonUI = ({ content, variant, custom, navLink }: buttonTypes) => {
+const ButtonUI = ({ content, variant, custom, navLink, onClick }: buttonTypes) => {
 
    let buttonElemnt: React.ReactElement = <></>;
    const navigate = useNavigate();
    let hasNavigateLink = navLink ? navLink : "";
-
+   
    const navFunction = (pathLink: string) => {
       navigate(pathLink);
    }
@@ -38,7 +39,7 @@ const ButtonUI = ({ content, variant, custom, navLink }: buttonTypes) => {
          break
       case TYPES_BUTTON.CUSTOM:
          buttonElemnt = (
-            <button onClick={() => { navFunction(hasNavigateLink) }} className={`font-Roboto ${custom}`}>{content}</button>
+            <button onClick={onClick} className={`font-Roboto ${custom}`}>{content}</button>
          );
          break
       case TYPES_BUTTON.ABOUT:

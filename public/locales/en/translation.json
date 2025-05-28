@@ -19,5 +19,10 @@
     "links": {
         "linkCard": "learn more ->",
         "linkSecundaryCard": "More info"
+    },
+    "ClassOne": {
+        "title": "What is react",
+        "videoLink": "https://www.youtube.com/watch?v=lWQ69WX7-hA",
+        "content": "Declarative React helps you create interactive user interfaces easily. Design simple views for each state in your application, and React will take care of efficiently updating and rendering the correct components when data changes. Declarative views make your code more predictable, therefore easy to debug. Component-based Create encapsulated components that handle their own state, and turn them into complex user interfaces. Since component logic is written in JavaScript and not in templates, you can easily pass data through your application and keep state out of the DOM. Learn it once, write it anywhere In React we don't leave out the rest of your technology tools, so you can develop new features without rewriting existing code. React can also render from the server using Node, as well as power mobile apps using React Native. Translated with DeepL.com (free version)"
     }
 }
