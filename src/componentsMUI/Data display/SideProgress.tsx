@@ -1,38 +1,6 @@
-"use client"
-
-
-interface TimelineItem {
-  title: string
-  timestamp: string
-  active?: boolean
-}
+import { timelineItems } from "../../../public/coursesData/courseOne/CourseOneData"
 
 export default function SideBarProgreess() {
-  const timelineItems: TimelineItem[] = [
-    {
-      title: "What a component is...",
-      timestamp: "Just now",
-      active: true,
-    },
-    {
-      title: "What role components play in React...",
-      timestamp: "59 minutes ago",
-      active: true,
-    },
-    {
-      title: "How to write your React component...",
-      timestamp: "12 hours ago",
-      active: true,
-    },
-    {
-      title: "Modified A data in page X",
-      timestamp: "Today, 11:59 AM",
-    },
-    {
-      title: "Deleted a page in project",
-      timestamp: "Feb 2, 2025",
-    },
-  ]
 
   return (
     <div className="bg-black text-white p-6 rounded-lg w-full max-w-md">
@@ -50,7 +18,7 @@ export default function SideBarProgreess() {
               </div>
               <div className="pb-6">
                 <p className="font-medium text-white">{item.title}</p>
-                <p className="text-gray-400 text-sm">{item.timestamp}</p>
+                <p className="text-gray-400 text-sm">{item.description}</p>
               </div>
             </div>
           </div>
