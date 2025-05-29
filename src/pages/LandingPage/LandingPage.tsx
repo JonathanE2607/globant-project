@@ -30,7 +30,7 @@ const LandingPage = () => {
             custom="px-16 mt-16 text-8xl font-bold"
           />
           <TextUI content={t("main.description")} styles="ml-16 mt-8 text-xl p-secundary-color max-w-[70%]" />
-          <ButtonUI content={t("main.start")} navLink="dashboard/catalog" variant={TYPES_BUTTON.CUSTOM} custom="ml-14 mt-14 px-20 py-3 rounded-full border border-[2.5px] p-primary-blue font-medium text-cyan-400 font-xl hover:bg-cyan-400/10 transition-colors" />
+          <ButtonUI content={t("main.start")} navLink="dashboard/shop" variant={TYPES_BUTTON.CUSTOM} custom="ml-14 mt-14 px-20 py-3 rounded-full border border-[2.5px] p-primary-blue font-medium text-cyan-400 font-xl hover:bg-cyan-400/10 transition-colors" />
         </div>
         <div className="w-2/5">
           <ImageUI source="https://icon.icepanel.io/Technology/svg/React.svg" alternative="React brand" sizes="none" styles="h-[75%] w-full" />
@@ -44,16 +44,19 @@ const LandingPage = () => {
           content="Components"
           variant={TYPES_CARD.BLUE}
           linkCard={t("links.linkCard")}
+          contentAll={t("main.components")}
         />
         <Card
           content="Hooks"
           variant={TYPES_CARD.PURPPLE}
           linkCard={t("links.linkCard")}
+          contentAll={t("main.hooks")}
         />
         <Card
           content="Props"
           variant={TYPES_CARD.ORANGE}
           linkCard={t("links.linkCard")}
+          contentAll={t("main.props")}
         />
       </section>
       <div className="bg-black flex justify-center py-8">
@@ -64,7 +67,7 @@ const LandingPage = () => {
           source="https://elpythonista.com/wp-content/uploads/2020/10/Clean_Code-portada-1024x576.jpg"
           variant={TYPES_SECUNDARY_CARD.LEFT}
           title="Clean code"
-          description="Risus sit suscipit et nibh. Morbi pretium volutpat eget habitasse habitant elementum dignissim arcu mauris. Ullamcorper euismod id commodo mi nec. Sit egestas mauris imperdiet feugiat eros, sapien at pellentesque."
+          description={t("main.cleanCode")}
           linkSecundaryCard={t("links.linkSecundaryCard")}
         />
       </section>
@@ -73,7 +76,7 @@ const LandingPage = () => {
           source="https://i.pinimg.com/736x/30/f0/89/30f08901a1d1409041039957a44aaffd.jpg"
           variant={TYPES_SECUNDARY_CARD.RIGHT}
           title="Solid principles"
-          description="Risus sit suscipit et nibh. Morbi pretium volutpat eget habitasse habitant elementum dignissim arcu mauris. Ullamcorper euismod id commodo mi nec. Sit egestas mauris imperdiet feugiat eros, sapien at pellentesque."
+          description={t("main.solidPrinciples")}
           linkSecundaryCard={t("links.linkSecundaryCard")}
         />
       </section>

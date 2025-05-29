@@ -1,0 +1,33 @@
+{
+  "main": {
+    "tittle": "<1>Aprenda</1> React em um novo nível.",
+    "description": "Pronto para subir de nível no React? Vamos construir algo incrível juntos.",
+    "start": " Iniciar",
+    "components": "Em React, um componente é uma parte reutilizável e autocontida da interface do usuário. Pode ser tão pequeno quanto um botão ou tão grande quanto uma página inteira. Os componentes podem ser funcionais ou baseados em classes, mas a maioria dos aplicativos React modernos usa componentes funcionais por sua simplicidade e melhor desempenho.",
+    "hooks": "Hooks são funções que permitem usar o estado e outros recursos do React em componentes funcionais. Eles foram introduzidos no React 16.8 e permitem gerenciar o estado, efeitos colaterais e contexto sem escrever componentes de classe. Os hooks mais comuns são useState, useEffect e useContext.",
+    "props": "Props (abreviação de propriedades) são a forma de passar dados de um componente para outro no React. Elas são somente leitura e permitem personalizar componentes passando valores como strings, números ou até outros componentes. As props ajudam a tornar os componentes reutilizáveis e dinâmicos.",
+    "cleanCode": "Código limpo é simples, legível e fácil de manter. Utiliza nomes significativos, funções pequenas e focadas, e segue o princípio da responsabilidade única para garantir que cada parte do código faça bem uma única tarefa. Código limpo evita comentários desnecessários ao tornar o código autoexplicativo, reduz duplicações, lida com erros de forma clara e mantém um formato consistente. Prioriza clareza em vez de complexidade, facilitando para outras pessoas (e para você no futuro) entender, testar e melhorar o código ao longo do tempo. Código limpo não é apenas uma questão estética; trata-se de criar software robusto, escalável e fácil de trabalhar a longo prazo.",
+    "solidPrinciples": "‘SOLID’ é o acrônimo de cinco princípios de design que ajudam os desenvolvedores a criar software sustentável e escalável. Esses princípios são: Princípio da Responsabilidade Única (SRP), Princípio Aberto/Fechado (OCP), Princípio da Substituição de Liskov (LSP), Princípio da Segregação de Interfaces (ISP) e Princípio da Inversão de Dependência (DIP). Seguir os princípios SOLID permite organizar melhor o código, facilitar os testes e aumentar a flexibilidade do design de software."
+  },
+  "Navbar": {
+    "project": "Projeto",
+    "home": "Início",
+    "catalog": "Loja",
+    "pricing": "Preços",
+    "developers": "Desenvolvedores",
+    "logIn": "Login"
+  },
+  "titles": {
+    "titleOne": "Aprenda sobre",
+    "titleTwo": "Conheça outras coisas"
+  },
+  "links": {
+    "linkCard": "Aprenda sobre ->",
+    "linkSecundaryCard": "Mais informações"
+  },
+  "ClassOne": {
+    "title": "O que é React",
+    "videoLink": "https://www.youtube.com/watch?v=lWQ69WX7-hA",
+    "content": "Declarativo: React ajuda você a criar interfaces de usuário interativas de forma simples. Projete visualizações simples para cada estado da sua aplicação, e o React cuidará de atualizar e renderizar eficientemente os componentes corretos quando os dados mudarem. As visualizações declarativas tornam seu código mais previsível e, portanto, mais fácil de depurar. Baseado em componentes: Crie componentes encapsulados que gerenciem seu próprio estado e componha-os para formar interfaces de usuário complexas. Como a lógica dos componentes é escrita em JavaScript e não em templates, você pode passar dados facilmente através da aplicação e manter o estado fora do DOM. Aprenda uma vez, escreva em qualquer lugar: React não exclui o restante das suas ferramentas tecnológicas, então você pode desenvolver novas funcionalidades sem reescrever o código existente. React também pode ser renderizado no servidor usando Node, além de potencializar aplicações móveis com React Native."
+  }
+}

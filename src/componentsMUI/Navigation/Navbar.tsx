@@ -18,7 +18,7 @@ export default function Header({ custom }: NavbarTypes) {
           <LinkUI link="/" content={t("Navbar.project")} variant={TYPE_LINKS.TITTLE_LINK} custom="mr-6" />
           <nav className="flex items-center space-x-8">
             <LinkUI link="/" content={t("Navbar.home")} variant={TYPE_LINKS.NAV_LINK} />
-            <LinkUI link="/dashboard/catalog" content={t("Navbar.catalog")} variant={TYPE_LINKS.NAV_LINK} />
+            <LinkUI link="/dashboard/shop" content={t("Navbar.catalog")} variant={TYPE_LINKS.NAV_LINK} />
             <LinkUI link="/" content={t("Navbar.pricing")} variant={TYPE_LINKS.NAV_LINK} />
             <div className="relative">
               <LinkUI link="/" content={t("Navbar.developers")} variant={TYPE_LINKS.NAV_LINK} />

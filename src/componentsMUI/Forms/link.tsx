@@ -1,4 +1,3 @@
-
 import React from "react";
 import { TYPE_LINKS } from "../../utils/typesLink";
 import { Link } from "react-router-dom";

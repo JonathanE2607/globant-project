@@ -9,8 +9,7 @@ import Layout from "./pages/Dashboard/Layout";
 import LayoutCourse from "./pages/Course/Layout";
 import Content from "./pages/Course/Content";
 import Practice from "./pages/Course/Practice";
-import ContentParts from "./pages/Course/ContentParts";
-
+import Shop from "./pages/Dashboard/Shop";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +23,9 @@ const router = createBrowserRouter([
       {
         path:"catalog",
         element:<Catalog />
+      },{
+        path: "shop",
+        element: <Shop />
       }
     ]
   },{
@@ -34,11 +36,8 @@ const router = createBrowserRouter([
        path: "content/:id",
        element: < Content />
       },{
-        path: "practice",
+        path: "practice/:id",
         element: < Practice />
-       },{
-        path: "content/:id/:id",
-        element: < ContentParts />
        }
     ]
   }

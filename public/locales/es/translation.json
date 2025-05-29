@@ -1,13 +1,18 @@
 {
     "main": {
         "tittle": "<1>Aprende</1> react al siguiente nivel.",
-        "description": "Lorem ipsum dolor sit amet consectetur Hola que hace, magna netus vel dignissim parturient auctor.",
-        "start": " Iniciar"
+        "description": "¿Listo para subir de nivel en React? Vamos a construir algo impresionante juntos.",
+        "start": " Iniciar",
+        "components": "en React es una pieza reutilizable y autocontenida de la interfaz de usuario. Puede ser tan pequeño como un botón o tan grande como una página entera. Los componentes pueden ser funcionales o basados en clases, pero la mayoría de las aplicaciones React modernas utilizan componentes funcionales por su simplicidad y mejor rendimiento.",
+        "hooks": "Los hooks son funciones que permiten utilizar el estado y otras características de React en componentes funcionales. Se introdujeron en React 16.8 y permiten gestionar el estado, los efectos secundarios y el contexto sin escribir componentes de clase. Los hooks más comunes son useState, useEffect y useContext.",
+        "props": "Props (abreviatura de propiedades) son la forma de pasar datos de un componente a otro en React. Son de sólo lectura y permiten personalizar los componentes pasando valores como cadenas, números o incluso otros componentes. Los props ayudan a que los componentes sean reutilizables y dinámicos.",
+        "cleanCode": "El código limpio es sencillo, legible y fácil de mantener. Utiliza nombres significativos, funciones pequeñas y centradas, y sigue el principio de responsabilidad única para garantizar que cada fragmento de código hace bien una cosa. El código limpio evita comentarios innecesarios haciendo que el propio código sea autoexplicativo, reduce la duplicación, gestiona los errores con claridad y mantiene un formato coherente. Prioriza la claridad sobre la inteligencia, facilitando a los demás (y a ti mismo en el futuro) la comprensión, comprobación y mejora del código a lo largo del tiempo. El código limpio no es sólo cuestión de estética; se trata de crear un software robusto, escalable y con el que sea fácil trabajar a largo plazo.",
+        "solidPrinciples": "«SOLID» es el acrónimo de cinco principios de diseño que ayudan a los desarrolladores a crear software mantenible y escalable. Estos principios son: Principio de Responsabilidad Única (SRP), Principio Abierto/Cerrado (OCP), Principio de Sustitución de Liskov (LSP), Principio de Segregación de Interfaces (ISP) y Principio de Inversión de Dependencias (DIP). Seguir los principios SOLID permite organizar mejor el código, facilitar las pruebas y aumentar la flexibilidad del diseño de software."
     },
     "Navbar": {
         "project": "Proyecto",
         "home": "Inicio",
-        "catalog": "Catalogo",
+        "catalog": "Tienda",
         "pricing": "Precios",
         "developers": "Desarrolladores",
         "logIn": "Inicio de sesion"

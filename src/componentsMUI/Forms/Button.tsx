@@ -39,12 +39,17 @@ const ButtonUI = ({ content, variant, custom, navLink, onClick }: buttonTypes) =
          break
       case TYPES_BUTTON.CUSTOM:
          buttonElemnt = (
+            <button onClick={() => { navFunction(hasNavigateLink) }} className={`font-Roboto ${custom}`}>{content}</button>
+         );
+         break
+         case TYPES_BUTTON.CUSTOM_ON_CLICK:
+         buttonElemnt = (
             <button onClick={onClick} className={`font-Roboto ${custom}`}>{content}</button>
          );
          break
       case TYPES_BUTTON.ABOUT:
          buttonElemnt = (
-            <button onClick={() => { navFunction(hasNavigateLink) }} className={`font-Roboto bg-gray-700 px-4 py-3 px-4 rounded-lg ${custom}`}>{content}</button>
+            <button onClick={() => { navFunction(hasNavigateLink) }} className={`font-Roboto bg-gray-700 py-3 px-4 rounded-lg ${custom}`}>{content}</button>
          );
          break;
       case TYPES_BUTTON.lANGUAGE:

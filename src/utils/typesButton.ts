@@ -4,4 +4,5 @@ export enum TYPES_BUTTON{
     ABOUT,
     CUSTOM,
     lANGUAGE,
+    CUSTOM_ON_CLICK
 }

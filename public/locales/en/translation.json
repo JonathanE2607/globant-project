@@ -1,13 +1,18 @@
 {
     "main": {
         "tittle": "<1>Learn</1> react to the next level.",
-        "description": "Lorem ipsum dolor hello, how are you consectetur adipiscing elit, magna netus vel dignissim parturient auctor.",
-        "start": " Start"
+        "description": "Ready to level up your React skills? Let's build something awesome together.",
+        "start": " Start",
+        "components": "in React is a reusable, self-contained piece of UI. It can be as small as a button or as large as an entire page. Components can be functional or class-based, but most modern React apps use functional components for simplicity and better performance.",
+        "hooks": "Hooks are functions that let you use state and other React features in functional components. They were introduced in React 16.8 and allow you to manage state, side effects, and context without writing class components. Common hooks include useState, useEffect, and useContext.",
+        "props": "Props (short for properties) are how you pass data from one component to another in React. They are read-only and allow you to customize components by passing values like strings, numbers, or even other components. Props help make components reusable and dynamic.",
+        "cleanCode": "Clean code is simple, readable, and easy to maintain. It uses meaningful names, small and focused functions, and follows the single responsibility principle to ensure each piece of code does one thing well. Clean code avoids unnecessary comments by making the code itself self-explanatory, reduces duplication, handles errors clearly, and maintains consistent formatting. It prioritizes clarity over cleverness, making it easier for others (and your future self) to understand, test, and improve the code over time. Clean code is not just about aesthetics; it's about creating software that is robust, scalable, and easy to work with in the long run.",
+        "solidPrinciples": "SOLID is an acronym for five design principles that help developers create maintainable and scalable software. These principles are: Single Responsibility Principle (SRP), Open/Closed Principle (OCP), Liskov Substitution Principle (LSP), Interface Segregation Principle (ISP), and Dependency Inversion Principle (DIP). Following SOLID principles leads to better code organization, easier testing, and improved flexibility in software design."
     },
     "Navbar": {
         "project": "Project",
         "home": "Home",
-        "catalog": "Catalog",
+        "catalog": "Shop",
         "pricing": "Pricing",
         "developers": "Developers",
         "logIn": "Log in"

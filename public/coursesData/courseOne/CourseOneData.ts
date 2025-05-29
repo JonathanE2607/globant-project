@@ -4,46 +4,121 @@ interface TimelineItem {
   active?: boolean
 }
 
-const timelineItems: TimelineItem[] = [
-  {
-    title: "What a component is...",
-    description: "Just now",
-    active: true,
-  },
-  {
-    title: "What role components play in React...",
-    description: "59 minutes ago",
-    active: true,
-  },
-  {
-    title: "How to write your React component...",
-    description: "12 hours ago",
-    active: true,
-  },
-  {
-    title: "Modified A data in page X",
-    description: "Today, 11:59 AM",
-  },
-  {
-    title: "Deleted a page in project",
-    description: "Feb 2, 2025",
-  },
-]
+interface TimelineItem {
+  title: string
+  description: string
+  active?: boolean
+}
 
-interface courseType {
-  title: string,
-  content: string,
+const timelineItems: { [id: string]: TimelineItem[] } = {
+   "what-is-react": [
+    {
+      title: "What a component is...",
+      description: "Just now",
+      active: true,
+    },{
+      title: "rules of hooks test",
+      description: "Improve this code with works the component",
+    }
+  ],
+  "first-component": [
+    {
+      title: "How to write your React component...",
+      description: "12 hours ago",
+    },
+  ]
+}
+
+
+interface Course {
+  id: string
+  title: string
+  content: string
   testFunction: string
+  correctFunction: string
 }
 
-const courseData: courseType = {
-  title: "create your first interface",
-  content: "Traditionally when creating web pages, web developers marked up their content and then added interaction by sprinkling on some JavaScript. This worked great when interaction was a nice-to-have on the web. Now it is expected for many sites and all apps. React puts interactivity first while still using the same technology: a React component is a JavaScript function that you can sprinkle with markup. Here’s what that looks like (you can edit the example below):",
-  testFunction:
-    `interface ContentType{ title: string }
-      const Component = ({title}: ContentType) => {
-         return title
-      }`
+const courseData: Course[] = [
+  {
+    id: "what-is-react",
+    title: "rules of hooks test",
+    content: "Improve this code and works the component:",
+    testFunction: `//Hello what is react`,
+    correctFunction: `//modify this function does not break the rules of hooks
+
+import { useState, useEffect } from "react";
+function InvalidHookUsage({ condition }) {
+  const [count, setCount] = useState(0);
+  if (condition) {
+    useEffect(() => {
+      console.log("Efecto activado");
+    }, [condition]);
+  }
+  return (
+    <>
+    </>
+  );
 }
 
-export { courseData, timelineItems };
+export default InvalidHookUsage;`,
+  },
+  {
+    id: "first-component",
+    title: "Test",
+    content: "Improve this code with works the component:",
+    testFunction: `//write what is missing for the return of this component
+
+    const Hello = () => {
+  return <h1>Hello, React!</h1>;
+};`,
+    correctFunction: `//write what is missing for the return of this component
+
+    const Hello = () => {
+  return <h1>Hello, React!</h1>;
+};
+
+export default Hello;`,
+  },
+  {
+    id: "rules-hooks",
+    title: "Test",
+    content: "Improve this code with works the component:",
+    testFunction: `//modify this function does not break the rules of hooks
+
+import { useState, useEffect } from "react";
+function InvalidHookUsage({ condition }) {
+  if (condition) {
+    const [count, setCount] = useState(0); //change this line to not break the rules of hooks
+    useEffect(() => {
+      console.log("Efecto activado");
+    }, []);
+  }
+  return (
+    <>
+    </>
+  );
+}
+
+export default InvalidHookUsage;`,
+    correctFunction: `//modify this function does not break the rules of hooks
+
+import { useState, useEffect } from "react";
+function InvalidHookUsage({ condition }) {
+  const [count, setCount] = useState(0);
+  if (condition) {
+    useEffect(() => {
+      console.log("Efecto activado");
+    }, [condition]);
+  }
+  return (
+    <>
+    </>
+  );
+}
+
+export default InvalidHookUsage;`,
+  },
+];
+
+
+export { courseData, timelineItems }
