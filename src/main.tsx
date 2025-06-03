@@ -10,6 +10,7 @@ import LayoutCourse from "./pages/Course/Layout";
 import Content from "./pages/Course/Content";
 import Practice from "./pages/Course/Practice";
 import Shop from "./pages/Dashboard/Shop";
+import {Provider  } from 'react-redux'
 
 const router = createBrowserRouter([
   {
@@ -43,10 +44,12 @@ const router = createBrowserRouter([
   }
 ]);
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
+  <Provider store={}>
+    <React.StrictMode>
     <React.Suspense fallback="loading...">
      <RouterProvider router={router} />
   </React.Suspense>
   </React.StrictMode>
+  </Provider>
 );
  

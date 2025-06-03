@@ -5,16 +5,16 @@ import SideProgressBar from "../../../componentsMUI/Data display/SideProgress";
 import ButtonUI from "../../../componentsMUI/Forms/Button";
 import { TYPES_BUTTON } from "../../../utils/typesButton";
 import { Editor } from "@monaco-editor/react";
-import * as monaco from "monaco-editor"; // 👈 Import necesario para tipos
+import * as monaco from "monaco-editor";
 import { courseData } from "../../../../public/coursesData/courseOne/CourseOneData";
 import { useParams } from "react-router-dom";
 
 const Practice = () => {
 
-  const {id} = useParams();
+  const { id } = useParams();
   const test = courseData.find((course) => course.id === id);
   const editorRef = useRef<monaco.editor.IStandaloneCodeEditor | null>(null);
-  
+
   const handleEditorDidMount = (
     editor: monaco.editor.IStandaloneCodeEditor
   ) => {
@@ -24,7 +24,8 @@ const Practice = () => {
   const getEditorValue = () => {
     if (editorRef.current?.getValue() === test?.correctFunction) {
       alert('Felicidades! Tu código es correcto');
-    }else {
+
+    } else {
       alert("Lo siento, tu código no es correcto. Inténtalo de nuevo.");
     }
   };
@@ -37,9 +38,9 @@ const Practice = () => {
           content={test?.title}
           custom="ml-16 text-3xl text-white font-bold"
         />
-         <p className="font-roboto text-2xl ml-16 mb-8 mt-8 text-slate-300 leading-[2] max-w-3xl">
+        <p className="font-roboto text-2xl ml-16 mb-8 mt-8 text-slate-300 leading-[2] max-w-3xl">
           {test?.content}
-        </p> 
+        </p>
         <div className="ml-16 mt-12 w-full">
           <Editor
             height="70vh"

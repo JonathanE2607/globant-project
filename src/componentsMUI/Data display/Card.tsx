@@ -165,7 +165,7 @@ const Card = ({
                 <div className="mt-2">
                   <div className="w-full bg-gray-200 rounded h-2">
                     <div
-                      className="bg-teal-500 h-2 rounded"
+                      className="bg-green-500 h-2 rounded"
                       style={{
                         width: `${(hasNumSucces / hasNumFinish) * 100}%`,
                       }}
