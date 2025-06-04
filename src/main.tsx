@@ -10,7 +10,8 @@ import LayoutCourse from "./pages/Course/Layout";
 import Content from "./pages/Course/Content";
 import Practice from "./pages/Course/Practice";
 import Shop from "./pages/Dashboard/Shop";
-import {Provider  } from 'react-redux'
+import { Provider } from 'react-redux'
+import { store } from '../src/store'
 
 const router = createBrowserRouter([
   {
@@ -44,7 +45,7 @@ const router = createBrowserRouter([
   }
 ]);
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <Provider store={}>
+  <Provider store={store}>
     <React.StrictMode>
     <React.Suspense fallback="loading...">
      <RouterProvider router={router} />

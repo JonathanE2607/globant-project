@@ -7,13 +7,16 @@ import { TYPES_BUTTON } from "../../../utils/typesButton";
 import { Editor } from "@monaco-editor/react";
 import * as monaco from "monaco-editor";
 import { courseData } from "../../../../public/coursesData/courseOne/CourseOneData";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { patchProgress } from "../../../../services/courseService";
 
 const Practice = () => {
 
   const { id } = useParams();
   const test = courseData.find((course) => course.id === id);
   const editorRef = useRef<monaco.editor.IStandaloneCodeEditor | null>(null);
+  const data = { "numSucces": 1 }
+  const navigate = useNavigate();
 
   const handleEditorDidMount = (
     editor: monaco.editor.IStandaloneCodeEditor
@@ -24,7 +27,10 @@ const Practice = () => {
   const getEditorValue = () => {
     if (editorRef.current?.getValue() === test?.correctFunction) {
       alert('Felicidades! Tu código es correcto');
-
+      if (typeof id === "string") {
+        patchProgress({ id, data });
+      }
+      navigate("/dashboard/catalog")
     } else {
       alert("Lo siento, tu código no es correcto. Inténtalo de nuevo.");
     }

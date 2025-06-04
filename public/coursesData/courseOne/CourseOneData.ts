@@ -1,34 +1,3 @@
-interface TimelineItem {
-  title: string
-  description: string
-  active?: boolean
-}
-
-interface TimelineItem {
-  title: string
-  description: string
-  active?: boolean
-}
-
-const timelineItems: { [id: string]: TimelineItem[] } = {
-   "what-is-react": [
-    {
-      title: "What a component is...",
-      description: "Just now",
-      active: true,
-    },{
-      title: "rules of hooks test",
-      description: "Improve this code with works the component",
-    }
-  ],
-  "first-component": [
-    {
-      title: "How to write your React component...",
-      description: "12 hours ago",
-    },
-  ]
-}
-
 
 interface Course {
   id: string
@@ -121,4 +90,4 @@ export default InvalidHookUsage;`,
 ];
 
 
-export { courseData, timelineItems }
+export { courseData }

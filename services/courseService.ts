@@ -26,3 +26,7 @@ export const getCourses = async (): Promise<Courses[]> => {
 export const putCourse = ({id, updatedData}:{id:string, updatedData: Courses}) => {
   return axios.put(`${URL}/${id}`, updatedData)
 }
+
+export const patchProgress = ({id, data}:{id:string, data: object}) => {
+  return axios.patch(`${URL}/${id}`, data);
+}
