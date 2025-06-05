@@ -1,5 +1,10 @@
 import axios from 'axios';
-
+ type progressType = {
+  id: string;
+  title: string;
+  description: string;
+  active: boolean;
+}
 export interface Courses {
   id: string;
   title: string;
@@ -7,6 +12,9 @@ export interface Courses {
   image: string;
   videoLink: string;
   teacherName: string;
+  numSucces: number;
+  numFinish: number;
+  progress: progressType[];
 }
 
 const URL = 'http://localhost:3000/courses'
@@ -29,4 +37,8 @@ export const putCourse = ({id, updatedData}:{id:string, updatedData: Courses}) =
 
 export const patchProgress = ({id, data}:{id:string, data: object}) => {
   return axios.patch(`${URL}/${id}`, data);
+}
+
+export const postCourse = (newCourse: Courses) => {
+  return axios.post(`${URL}`, newCourse);
 }

@@ -12,6 +12,7 @@ import Practice from "./pages/Course/Practice";
 import Shop from "./pages/Dashboard/Shop";
 import { Provider } from 'react-redux'
 import { store } from '../src/store'
+import AddNewClass from "./pages/Course/AddClass";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,9 @@ const router = createBrowserRouter([
       },{
         path: "practice/:id",
         element: < Practice />
+       },{
+        path: "addClass",
+        element: <AddNewClass />
        }
     ]
   }

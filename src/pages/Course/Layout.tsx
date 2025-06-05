@@ -10,7 +10,9 @@ const LayoutCourse = ({ }: layoutTypes) => {
     return (
         <>
             <Header custom="bg-black" />
-            <Outlet />
+            <div className="bg-black">
+                <Outlet />
+            </div>
             <Footer />
         </>
     )
