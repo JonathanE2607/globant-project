@@ -9,6 +9,7 @@ import * as monaco from "monaco-editor";
 import { courseData } from "../../../../public/coursesData/courseOne/CourseOneData";
 import { useNavigate, useParams } from "react-router-dom";
 import { patchProgress } from "../../../../services/courseService";
+import { toast, ToastContainer } from 'react-toastify'
 
 const Practice = () => {
 
@@ -26,13 +27,15 @@ const Practice = () => {
 
   const getEditorValue = () => {
     if (editorRef.current?.getValue() === test?.correctFunction) {
-      alert('Felicidades! Tu código es correcto');
+      toast.success("Felicidades tu codigo es correcto");
       if (typeof id === "string") {
         patchProgress({ id, data });
       }
-      navigate("/dashboard/catalog")
+      setTimeout(() => {
+      navigate("/dashboard/catalog");
+    }, 5000);
     } else {
-      alert("Lo siento, tu código no es correcto. Inténtalo de nuevo.");
+      toast.error("Lo siento, su codigo es incorrecto");
     }
   };
 
@@ -69,6 +72,7 @@ const Practice = () => {
             custom="px-20 py-3 rounded-full border border-2 p-primary-blue font-medium text-cyan-400 font-xl hover:bg-cyan-400/10 transition-colors"
             onClick={getEditorValue}
           />
+          <ToastContainer />
         </div>
       </div>
       <div>

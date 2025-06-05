@@ -86,7 +86,7 @@ function InvalidHookUsage({ condition }) {
 }
 
 export default InvalidHookUsage;`,
-  },
+  }
 ];
 
 
